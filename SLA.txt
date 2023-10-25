@@ -1,0 +1,10 @@
+Game -> singleton e builder
+Player(life, coins) -> builder, team -> stack
+Machines(nível, experiência, tier, ataque e vida) -> factory
+
+
+Você pode juntar duas peças iguais arrastando uma para cima da outra. Quando isso acontecer a peça resultante terá a maior das duas vidas + 1, a maior dos dois de ataques + 1 e a soma das experiências. Com 3 de experiência a peça ficará nível 2. Com 6 de experiência a peça ficará
+ nível 3 e não poderá ser fundida com outras peças semelhantes. -> state ou strategy
+
+Além disso, e mais importante, o time do jogado e restaurado da útima loja, e todas as mudanças que ocorreram na batalha são revertidas. -> Prototype(clone)
+
