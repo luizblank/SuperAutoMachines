@@ -8,7 +8,7 @@ public class Game
     public static int Round { get; set; } = 0;
     public Player Player = null;
     public Enemy Enemy = null;
-    public Shop shop = null;
+    public Shop Shop = null;
     public static void Reset()
         => crr = new Game();
 
