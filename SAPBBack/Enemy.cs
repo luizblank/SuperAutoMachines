@@ -5,7 +5,7 @@ public class Enemy
     private Enemy() { }
     private static Enemy crr = null;
     public static Enemy Current => crr;
-    public Stack<MachinesPrototype> Team = new();
+    public MachinesPrototype[] Team = new MachinesPrototype[5];
 
     private void RandomTeam()
     {
