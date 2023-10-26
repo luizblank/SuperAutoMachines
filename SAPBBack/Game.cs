@@ -29,4 +29,31 @@ public class Game
     {
         ShopRound();
     }
+
+    public class GameBuilder
+    {
+        private Game game = new Game();
+        public Game Build()
+            => this.game;
+        public Game SetPlayer(Player player)
+        {
+            this.game.Player = player;
+            return this.game;
+        }
+        public Game SetEnemy(Enemy enemy)
+        {
+            this.game.Enemy = enemy;
+            return this.game;
+        }
+        public Game SetShop(Shop shop)
+        {
+            this.game.Shop = shop;
+            return this.game;
+        }
+        public GameBuilder GetBuilder()
+            => new GameBuilder();
+        
+        public void New(GameBuilder builder)
+            => crr = builder.Build();
+    }
 }
