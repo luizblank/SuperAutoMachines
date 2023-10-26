@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Microsoft.VisualBasic;
 
 public abstract class MachinesPrototype : ICloneable
 {
@@ -25,7 +27,7 @@ public abstract class MachinesPrototype : ICloneable
         return;
     }
 
-    public virtual void DeadAbility()
+    public virtual void DeadAbility(IEnumerable playerteam, IEnumerable enemyteam)
     {
         return;
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 
 public class Drill : MachinesPrototype
 {
@@ -17,7 +18,7 @@ public class Drill : MachinesPrototype
         return clone;
     }
 
-    public override void DeadAbility()
+    public override void DeadAbility(IEnumerable playerteam, IEnumerable enemyteam)
     {
         Random random = new Random();
         int randId = random.Next(Player.Current.Team.Length);
