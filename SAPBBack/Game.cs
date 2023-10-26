@@ -14,7 +14,7 @@ public class Game
 
     public void ShopRound()
     {
-
+            
     }
 
     public void GameEnd()
