@@ -9,18 +9,28 @@ public class Game
     public Player Player = null;
     public Enemy Enemy = null;
     public Shop Shop = null;
+    public BattleFactory Battle = null;
     public static void Reset()
         => crr = new Game();
-
-    public void ShopRound()
+    public void StartShopRound()
     {
-        
-        BattleDefault.Current.StartBattle();  
+        Console.WriteLine(Shop);
+        // if (keypress == espaço){
+        //     EndShopRound();
+        // }
+    }
+    public void EndShopRound()
+    {
+        foreach (var machine in this.Player.Team)
+        {
+            machine.RoundShopAbility();
+        }
+        Battle.StartRoundBattle();  
     }
 
     public void GameEnd()
     {
-        if(Player.Current.Life <= 0)
+        if(this.Player.Life <= 0)
         {
             Console.WriteLine("Você Perdeu!");
         }
@@ -28,7 +38,7 @@ public class Game
 
     public void GameStart()
     {
-        ShopRound();
+        StartShopRound();
     }
 
     public class GameBuilder
@@ -49,6 +59,11 @@ public class Game
         public Game SetShop(Shop shop)
         {
             this.game.Shop = shop;
+            return this.game;
+        }
+        public Game SetBattle(BattleFactory battle)
+        {
+            this.game.Battle = battle;
             return this.game;
         }
         public GameBuilder GetBuilder()

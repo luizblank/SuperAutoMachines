@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 //singleton
-public class Enemy
+public class Enemy:Player
 {
     private Enemy() { }
     private static Enemy crr = null;

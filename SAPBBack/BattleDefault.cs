@@ -12,9 +12,10 @@ public class BattleDefault : BattleFactory
     {
         var CurrentPlayerMachine = PlayerTeam.Peek();
         var CurrentEnemyMachine = EnemyTeam.Peek();
-        CurrentPlayerMachine.DeadAbility
         CurrentPlayerMachine.Life -= CurrentEnemyMachine.Attack;
         CurrentEnemyMachine.Life -= CurrentPlayerMachine.Attack;
+        CurrentPlayerMachine.AttackAbility(PlayerTeam, EnemyTeam);
+        CurrentEnemyMachine.AttackAbility(EnemyTeam, PlayerTeam);
     }
 
 
@@ -40,21 +41,21 @@ public class BattleDefault : BattleFactory
         Kill();
     }
 
-    public void BattleBuild(Player player, Enemy enemy)
+    public void BattleBuild()
     {
-        this.Player = player;
-        for (int i = player.Team.Length - 1; i < 0; i--)
+        this.Player = Game.Current.Player;
+        for (int i = Player.Team.Length - 1; i < 0; i--)
         {
-            PlayerTeam.Push((MachinesPrototype)player.Team[i].Clone());
+            PlayerTeam.Push((MachinesPrototype)Player.Team[i].Clone());
         }
-        this.Enemy = enemy;
-        for (int i = enemy.Team.Length - 1; i < 0; i--)
+        this.Enemy = Game.Current.Enemy;
+        for (int i = Enemy.Team.Length - 1; i < 0; i--)
         {
-            EnemyTeam.Push((MachinesPrototype)enemy.Team[i].Clone());
+            EnemyTeam.Push((MachinesPrototype)Enemy.Team[i].Clone());
         }
     }
 
-    public void StartBattle()
+    public void StartRoundBattle()
     {
         while (PlayerTeam.Count > 0 && EnemyTeam.Count > 0)
         {
@@ -64,10 +65,13 @@ public class BattleDefault : BattleFactory
             Game.Current.Player.Trophies += 1;
         else
             Game.Current.Player.Life -= 1;
-        EndBattle();
+        EndRoundBattle();
     }
-    public void EndBattle()
+
+    public void EndRoundBattle()
     {
-        //gerar shop
+        if (Player.Life < 1)
+            Game.Current.GameEnd();
+        Game.Current.StartShopRound();
     }
 }

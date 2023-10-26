@@ -32,7 +32,7 @@ public abstract class MachinesPrototype : ICloneable
         return;
     }
 
-    public virtual void AttackAbility()
+    public virtual void AttackAbility(IEnumerable playerteam, IEnumerable enemyteam)
     {
         return;
     }

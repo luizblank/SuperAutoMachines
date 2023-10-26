@@ -18,7 +18,7 @@ public class Screwdriver : MachinesPrototype
     public override void SellAbility()
     {
         Random random = new Random();
-        int randId = random.Next(Player.Current.Team.Length);
-        Player.Current.Team[randId].Life += 1;
+        int randId = random.Next(Game.Current.Player.Team.Length);
+        Game.Current.Player.Team[randId].Life += 1;
     }
 }
