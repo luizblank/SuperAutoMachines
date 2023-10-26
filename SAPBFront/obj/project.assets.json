@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\5 - Aprendizes\\2 - Desenvolvimento de Sistemas\\3 - Desenvolvimento de Sistemas 2023\\Benhur Feld\\10. C# Avançado\\Desafios\\Padrão de Projeto\\SAPBFront\\SAPBFront.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\SAM benhur\\SuperAutoMachines\\SAPBFront\\SAPBFront.csproj",
       "projectName": "SAPBFront",
-      "projectPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\5 - Aprendizes\\2 - Desenvolvimento de Sistemas\\3 - Desenvolvimento de Sistemas 2023\\Benhur Feld\\10. C# Avançado\\Desafios\\Padrão de Projeto\\SAPBFront\\SAPBFront.csproj",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\SAM benhur\\SuperAutoMachines\\SAPBFront\\SAPBFront.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\5 - Aprendizes\\2 - Desenvolvimento de Sistemas\\3 - Desenvolvimento de Sistemas 2023\\Benhur Feld\\10. C# Avançado\\Desafios\\Padrão de Projeto\\SAPBFront\\obj\\",
+      "outputPath": "C:\\Users\\disrct\\Desktop\\SAM benhur\\SuperAutoMachines\\SAPBFront\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config"

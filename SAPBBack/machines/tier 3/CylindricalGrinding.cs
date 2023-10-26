@@ -1,8 +1,8 @@
 public class CylindricalGrinding : MachinesPrototype
 {
     public override int Tier => 3;
-    public override int Attack { get; protected set; } = 2;
-    public override int Life { get; protected set; } = 6;
+    public override int Attack { get; set; } = 2;
+    public override int Life { get; set; } = 6;
 
 
     public override object Clone()

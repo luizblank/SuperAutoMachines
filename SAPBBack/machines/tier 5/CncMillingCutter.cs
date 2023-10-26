@@ -1,8 +1,8 @@
 public class CncMillingCutter : MachinesPrototype //Fresa CNC
 {
     public override int Tier => 5;
-    public override int Attack { get; protected set; } = 8;
-    public override int Life { get; protected set; } = 4;
+    public override int Attack { get; set; } = 8;
+    public override int Life { get; set; } = 4;
 
     public override object Clone()
     {

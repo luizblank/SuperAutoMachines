@@ -2,9 +2,9 @@ public class ColDrill : MachinesPrototype
 {
     public override int Tier => 2;
 
-    public override int Attack { get; protected set; } = 3;
+    public override int Attack { get; set; } = 3;
 
-    public override int Life {get; protected set;} = 5;
+    public override int Life {get; set;} = 5;
 
     public override object Clone()
     {

@@ -1,8 +1,8 @@
 public class CncLathe : MachinesPrototype //Corte a Plasma CNC
 {
     public override int Tier => 5;
-    public override int Attack { get; protected set; } = 5;
-    public override int Life { get; protected set; } = 8;
+    public override int Attack { get; set; } = 5;
+    public override int Life { get; set; } = 8;
     public override object Clone()
     {
         var clone = new CncLathe();

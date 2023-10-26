@@ -1,3 +1,5 @@
+using System;
+
 public class Game
 {
     private Game() { }
@@ -9,4 +11,22 @@ public class Game
     public Shop shop = null;
     public static void Reset()
         => crr = new Game();
+
+    public void ShopRound()
+    {
+
+    }
+
+    public void GameEnd()
+    {
+        if(Player.Current.Life <= 0)
+        {
+            Console.WriteLine("Você Perdeu!");
+        }
+    }
+
+    public void GameStart()
+    {
+        ShopRound();
+    }
 }

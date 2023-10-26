@@ -1,8 +1,8 @@
 public class GasFurnace : MachinesPrototype
 {
     public override int Tier => 2;
-    public override int Attack { get; protected set; } = 1;
-    public override int Life { get; protected set; } = 3;
+    public override int Attack { get; set; } = 1;
+    public override int Life { get; set; } = 3;
     public override object Clone()
     {
         var clone = new GasFurnace();

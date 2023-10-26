@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 //singleton and builder
 public class Shop
 {
@@ -36,10 +37,30 @@ public class Shop
         }
     }
 
-    public void Buy()
+    public void Buy(int buyid)
     {
-        Stack<MachinesPrototype> sla = new();
-        // var vector = sla as Array;
+        if(Player.Current.Coins < 3)
+        {  
+            Console.WriteLine("Não é possível comprar com essa quantidade de moedas!");
+            return;
+        }
+
+        var teamArr = Player.Current.Team;
+        int notnull = 0;
+        for(int i = 0; i < teamArr.Length; i++)
+        {
+            if(teamArr[i] == null)
+            {
+                Player.Current.Team[i] = CurrentShop[buyid - 1];
+                Player.Current.Coins -= 3;
+                CurrentShop[i] = null;
+                return;
+            }
+            notnull += 1;
+        }
+
+        if(notnull == teamArr.Length)
+            Console.WriteLine("Seu time está lotado! Venda uma máquina para comprar uma nova.");
     }
 
     public void SellMachine(MachinesPrototype machine)

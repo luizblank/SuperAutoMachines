@@ -2,8 +2,8 @@ public class ElectricFurnace : MachinesPrototype
 {
     public override int Tier => 3;
 
-    public override int Attack { get; protected set; } = 4;
-    public override int Life { get; protected set; } = 3;
+    public override int Attack { get; set; } = 4;
+    public override int Life { get; set; } = 3;
 
     public override object Clone()
     {

@@ -1,8 +1,8 @@
 public class Treadmill : MachinesPrototype
 {
     public override int Tier => 1;
-    public override int Attack { get; protected set; } = 3;
-    public override int Life { get; protected set; } = 1;
+    public override int Attack { get; set; } = 3;
+    public override int Life { get; set; } = 1;
     public override object Clone()
     {
         var clone = new Treadmill();
