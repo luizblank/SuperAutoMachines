@@ -15,4 +15,9 @@ public class ColDrill : MachinesPrototype
         clone.Experience = this.Experience;
         return clone;
     }
+
+    public virtual void AttackAbility()
+    {
+        return;
+    }
 }

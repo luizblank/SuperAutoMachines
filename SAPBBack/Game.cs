@@ -14,7 +14,8 @@ public class Game
 
     public void ShopRound()
     {
-
+        
+        BattleDefault.Current.StartBattle();  
     }
 
     public void GameEnd()

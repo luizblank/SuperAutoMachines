@@ -32,6 +32,11 @@ public abstract class MachinesPrototype : ICloneable
         return;
     }
 
+    public virtual void AttackAbility()
+    {
+        return;
+    }
+
     public virtual void LevelUp(int level, int experience)
     {
         level = this.Level;
