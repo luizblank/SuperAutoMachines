@@ -17,7 +17,7 @@ public abstract class MachinesPrototype : ICloneable
         return;
     }
 
-    public virtual void RoundBattleAbility()
+    public virtual void RoundBattleAbility(IEnumerable playerteam, IEnumerable enemyteam)
     {
         return;
     }

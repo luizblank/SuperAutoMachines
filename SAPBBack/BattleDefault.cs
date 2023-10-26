@@ -12,6 +12,7 @@ public class BattleDefault : BattleFactory
     {
         var CurrentPlayerMachine = PlayerTeam.Peek();
         var CurrentEnemyMachine = EnemyTeam.Peek();
+        CurrentPlayerMachine.DeadAbility
         CurrentPlayerMachine.Life -= CurrentEnemyMachine.Attack;
         CurrentEnemyMachine.Life -= CurrentPlayerMachine.Attack;
     }
